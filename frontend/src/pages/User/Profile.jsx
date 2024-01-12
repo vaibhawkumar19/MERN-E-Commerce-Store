@@ -49,10 +49,10 @@ const Profile = () => {
     <div className="container mx-auto p-4 mt-[10rem]">
       <div className="flex justify-center align-center md:flex md:space-x-4">
         <div className="md:w-1/3">
-          <h2 className="text-2xl font-semibold mb-4">Update Profile</h2>
+          <h2 className="text-2xl font-semibold mb-4"><b>Update Profile</b></h2>
           <form onSubmit={submitHandler}>
             <div className="mb-4">
-              <label className="block text-white mb-2">Name</label>
+              <label className="block text-black mb-2">Name</label>
               <input
                 type="text"
                 placeholder="Enter name"
@@ -63,7 +63,7 @@ const Profile = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-white mb-2">Email Address</label>
+              <label className="block text-black mb-2">Email Address</label>
               <input
                 type="email"
                 placeholder="Enter email"
@@ -74,7 +74,7 @@ const Profile = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-white mb-2">Password</label>
+              <label className="block text-black mb-2">Password</label>
               <input
                 type="password"
                 placeholder="Enter password"
@@ -85,7 +85,7 @@ const Profile = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-white mb-2">Confirm Password</label>
+              <label className="block text-black mb-2">Confirm Password</label>
               <input
                 type="password"
                 placeholder="Confirm password"
@@ -107,7 +107,7 @@ const Profile = () => {
                 to="/user-orders"
                 className="bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700"
               >
-                My Orders
+                My Cource
               </Link>
             </div>
             {loadingUpdateProfile && <Loader />}

@@ -48,7 +48,7 @@ const Register = () => {
   };
 
   return (
-    <section className="pl-[10rem] flex flex-wrap">
+    <section className="pl-[10rem] flex">
       <div className="mr-[4rem] mt-[5rem]">
         <h1 className="text-2xl font-semibold mb-4">Register</h1>
 
@@ -56,7 +56,7 @@ const Register = () => {
           <div className="my-[2rem]">
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               Name
             </label>
@@ -73,7 +73,7 @@ const Register = () => {
           <div className="my-[2rem]">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               Email Address
             </label>
@@ -90,7 +90,7 @@ const Register = () => {
           <div className="my-[2rem]">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               Password
             </label>
@@ -103,11 +103,12 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          
 
           <div className="my-[2rem]">
             <label
               htmlFor="confirmPassword"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               Confirm Password
             </label>
@@ -124,7 +125,7 @@ const Register = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+            className="bg-pink-500 text-black px-4 py-2 rounded cursor-pointer my-[1rem]"
           >
             {isLoading ? "Registering..." : "Register"}
           </button>
@@ -133,7 +134,7 @@ const Register = () => {
         </form>
 
         <div className="mt-4">
-          <p className="text-white">
+          <p className="text-black">
             Already have an account?{" "}
             <Link
               to={redirect ? `/login?redirect=${redirect}` : "/login"}
@@ -144,11 +145,13 @@ const Register = () => {
           </p>
         </div>
       </div>
-      <img
-        src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80"
-        alt=""
-        className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
-      />
+      <div className="px-3 h-[100vh]" style={{padding: '0 0 28px 0'}}>
+        <img
+          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80"
+          alt=""
+          className="h-full w-full xl:block md:hidden sm:hidden rounded-lg"
+        />
+        </div>
     </section>
   );
 };

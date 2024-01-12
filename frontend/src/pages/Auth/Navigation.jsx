@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   AiOutlineHome,
   AiOutlineShopping,
@@ -6,7 +7,7 @@ import {
   AiOutlineUserAdd,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaBook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
@@ -14,6 +15,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useLogoutMutation } from "../../redux/api/usersApiSlice";
 import { logout } from "../../redux/features/auth/authSlice";
 import FavoritesCount from "../Products/FavoritesCount";
+import {HashLink} from "react-router-hash-link"
 
 const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
@@ -57,21 +59,24 @@ const Navigation = () => {
           <AiOutlineHome className="mr-2 mt-[3rem]" size={26} />
           <span className="hidden nav-item-name mt-[3rem]">HOME</span>{" "}
         </Link>
+        <Link>
+    
 
-        <Link
-          to="/shop"
+        </Link>
+        <HashLink
+          to="#course"
           className="flex items-center transition-transform transform hover:translate-x-2"
         >
-          <AiOutlineShopping className="mr-2 mt-[3rem]" size={26} />
-          <span className="hidden nav-item-name mt-[3rem]">SHOP</span>{" "}
-        </Link>
+          <FaBook className="mr-2 mt-[3rem]" size={26} />
+          <span className="hidden nav-item-name mt-[3rem]">COURSES</span>{" "}
+        </HashLink>
+
 
         <Link to="/cart" className="flex relative">
           <div className="flex items-center transition-transform transform hover:translate-x-2">
             <AiOutlineShoppingCart className="mt-[3rem] mr-2" size={26} />
             <span className="hidden nav-item-name mt-[3rem]">Cart</span>{" "}
           </div>
-
           <div className="absolute top-9">
             {cartItems.length > 0 && (
               <span>
@@ -214,6 +219,7 @@ const Navigation = () => {
         )}
       </div>
     </div>
+    
   );
 };
 
