@@ -1,21 +1,21 @@
+// Navigation.jsx
 import { useState } from "react";
-
 import {
   AiOutlineHome,
-  AiOutlineShopping,
   AiOutlineLogin,
   AiOutlineUserAdd,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import { PiAddressBook } from "react-icons/pi";
 import { FaHeart, FaBook } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useLogoutMutation } from "../../redux/api/usersApiSlice";
 import { logout } from "../../redux/features/auth/authSlice";
-import FavoritesCount from "../Products/FavoritesCount";
-import {HashLink} from "react-router-hash-link"
+
+// import About from "../../pages/Aboutus";
+import Aboutus from "../../pages/Aboutus";
 
 const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
@@ -59,23 +59,19 @@ const Navigation = () => {
           <AiOutlineHome className="mr-2 mt-[3rem]" size={26} />
           <span className="hidden nav-item-name mt-[3rem]">HOME</span>{" "}
         </Link>
-        <Link>
-    
-
-        </Link>
-        <HashLink
+        
+        <Link
           to="#course"
-          className="flex items-center transition-transform transform hover:translate-x-2"
-        >
+          className="flex items-center transition-transform transform hover:translate-x-2">
           <FaBook className="mr-2 mt-[3rem]" size={26} />
           <span className="hidden nav-item-name mt-[3rem]">COURSES</span>{" "}
-        </HashLink>
+        </Link>
 
 
         <Link to="/cart" className="flex relative">
           <div className="flex items-center transition-transform transform hover:translate-x-2">
             <AiOutlineShoppingCart className="mt-[3rem] mr-2" size={26} />
-            <span className="hidden nav-item-name mt-[3rem]">Cart</span>{" "}
+            <span className="hidden nav-item-name mt-[3rem]">CART</span>{" "}
           </div>
           <div className="absolute top-9">
             {cartItems.length > 0 && (
@@ -87,16 +83,15 @@ const Navigation = () => {
             )}
           </div>
         </Link>
+        
+        
+        <Link to="/aboutus" className="flex items-center transition-transform transform hover:translate-x-2">
+          <PiAddressBook className="mr-2 mt-[3rem]" size={26}  />
+         <span className="hidden nav-item-name mt-[3rem]">ABOUT US</span>{" "}
+          </Link>
 
-        <Link to="/favorite" className="flex relative">
-          <div className="flex justify-center items-center transition-transform transform hover:translate-x-2">
-            <FaHeart className="mt-[3rem] mr-2" size={20} />
-            <span className="hidden nav-item-name mt-[3rem]">
-              Favorites
-            </span>{" "}
-            <FavoritesCount />
-          </div>
-        </Link>
+        
+        
       </div>
 
       <div className="relative">
@@ -219,7 +214,6 @@ const Navigation = () => {
         )}
       </div>
     </div>
-    
   );
 };
 

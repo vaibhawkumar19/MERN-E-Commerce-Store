@@ -39,6 +39,7 @@ import VideoContaint from "./components/VideoContaint.jsx";
 import Mocktestdiscriptions from "./pages/Mocktestdiscriptions.jsx";
 import Mockdiscriptions from "./pages/Mockdiscriptions.jsx";
 import Ebook from "./pages/ebook.jsx";
+import Aboutus from "./pages/Aboutus.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -57,13 +58,11 @@ const router = createBrowserRouter(
       <Route path="" element={<PrivateRoute />}>
         <Route path="/profile" element={<Profile />} />
         <Route path="/shipping" element={<Shipping />} />
-        
-        
         <Route path="/mockinterview" element={<Mockdiscriptions/>}/>
         <Route path="/mocktest" element={<Mocktestdiscriptions/>}/>
         <Route path="/video-content" element={<VideoContaint/>}/>
         <Route path="/ebook" element={<Ebook/>}/>
-        
+        <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/placeorder" element={<PlaceOrder />} />
         <Route path="/order/:id" element={<Order />} />
         

@@ -17,7 +17,7 @@ const Mocktestdiscriptions = () => {
     }else{
       
       console.log('working')
-      window.location.href = `https://calendly.com/kvaibhaw94/30min`;
+      window.location.href = `https://calendly.com/takemyinterview/20min?month=2024-01`;
     }
     
    
