@@ -17,7 +17,7 @@ const Mocktestdiscriptions = () => {
     }else{
       
       console.log('working')
-      window.location.href = `https://calendly.com/takemyinterview/20min?month=2024-01`;
+      window.location.href = `http://localhost:3000/`;
     }
     
    
@@ -75,10 +75,6 @@ All the best!! Enjoy your test experience!
       <label htmlFor="agree-checkbox" className="ms-2 text-sm font-medium text-gray-100 dark:text-gray-300">I agree to the terms and conditions</label>
     </div>
         </div>
-
-        
-
-     
           <button
             onClick={handleSubmit}
             // disabled={isChecked !== true}

@@ -1,58 +1,79 @@
-import React from 'react';
-import Offer from '../components/Offer';
+import React, { useState } from 'react';
 import Footer from '../components/Footer';
-import ProductCard from "../components/productCard/ProductCard";
+import Offer from '../components/Offer';
 
-const Mockdiscriptions = () => {
-  const products = [
-    {
-      title: "Mock Interview for college Entrance Interview",
-      img: "../../public/images/First.jpg",
-      category: "interview"
-    },
-    {
-      title: "Mock Interview for Job Interview",
-      img: "../../public/images/MockTest.png",
-      category: "test"
-    },
-  
-  ];
+const Mocktestdiscriptions = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+    console.log(isChecked);
+  };
+
+  const handleSubmit = () => {
+    if(!isChecked){
+      alert('Please agree terms and condition to continue!')
+      
+    }else{
+      
+      console.log('working')
+      window.location.href = `https://calendly.com/interviewshala/30min`;
+    }
+    
+   
+  };
 
   return (
     <div>
       <Offer />
+      <div className='block p-10 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-10 w-2/4 p-4 mx-auto text-center border'>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mock Interview Instructions</h5>
+        <div className={`font-normal text-gray-700 dark:text-gray-400 text-left mb-10`}>
+         
+          
+          Before the Interview:
+<li>
+Please check your Mock Interview details.
+</li>
+<li>  
+Your Interview will start at the Scheduled time.
+</li>
+<li>
+If you have any questions or need any assistance, please send an email interviewshala@gmail.com.
 
-      <div className="w-[1200px]" >
-              <div  className="container mx-auto w-full flex flex-col items-center">
-                <h1 className="text-5xl font-bold text-center mt-6">
-                  Our Featured Mock Interview
-                </h1>
-                {/* Card */}
-                <div className="grid grid-cols-2 gap-32 mt-10 bg-gray-300 p-5 rounded-sm" id="#course">
+</li>
 
-                {products.map((product)=>(
-                 <ProductCard key={product.title} product={product}/>
-                ))}
-                </div>
-                
-              </div>
-            </div>
+During the Interview:
 
-      <div className='scroll-mx-100 scroll-ms-px-100 bg-blue-600 '>
-        {/* Elevate your college entrance and job interview skills with our online mock interview platform.
-        Participate in realistic mock interviews conducted on Google Meet and Zoom for an authentic experience.
-        Enjoy flexibility with a personalized schedule option, allowing you to choose a date and time that suits your convenience.
-        Receive expert feedback to refine your performance and boost your confidence for success.
-        Take control of your academic and professional journey by preparing comprehensively with our specialized mock interview sessions.
-      lorem500 */}
+<li>
+LOGOUT from all other email ids before joining the Google Meet. Candidates with email ids other than GMAIL, please ensure to SWITCH ACCOUNT and join only through the alternate GMAIL EMAIL id you have provided while uploading the documents before joining the Google Meet. It is the responsibility of the candidate to ensure that the camera, microphone, power back up and stable internet connection is available during the selection process. Requests for rescheduling will not be honored. Join the meet at least 5mts before the scheduled time.
+</li>
+<li>
+Schedule Interview: Once you successfully pay the interview fee you can book an interview slot as per your preferences Reply in same mail what is your course,date,time and venue of the interview.Please note we will be alloting seats on a first come first serve basis. The moment the seats are full, we will be Change the Fate of interview and time of interview. We urge you to give your interview as soon as possible if you wish to secure a seat in the Mock interview.
+</li>
+All the best!! Enjoy your Mock Interview experience!
+
+<div className="flex items-center mt-5" >
+      
+      <input type="checkbox" className='outline-none border-transparent p-3' value={isChecked} onChange={handleCheckboxChange} />
+      <label htmlFor="agree-checkbox" className="ms-2 text-sm font-medium text-gray-100 dark:text-gray-300">I agree to the terms and conditions</label>
+    </div>
+        </div>
+          <button
+            onClick={handleSubmit}
+            // disabled={isChecked !== true}
+            className={`bg-pink-600 ${isChecked=== false?"hover:cursor-not-allowed":"cursor-pointer"} text-white py-2 px-4 rounded-md hover:bg-pink-700 focus:outline-none focus:ring focus:border-blue-300`}
+          >
+            Next
+          </button>
+        
       </div>
-     <div className='flex flex-cal '>
-      <div className='w-full flex-grow fixed bottom-4'>
+      <div className='py-4 -mb-4 bg-gray-800 text-white text-center'>
       <Footer />
-      </div>
       </div>
     </div>
   );
 }
 
-export default Mockdiscriptions;
+export default Mocktestdiscriptions;
+

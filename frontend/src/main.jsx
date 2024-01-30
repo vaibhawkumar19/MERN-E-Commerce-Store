@@ -40,6 +40,8 @@ import Mocktestdiscriptions from "./pages/Mocktestdiscriptions.jsx";
 import Mockdiscriptions from "./pages/Mockdiscriptions.jsx";
 import Ebook from "./pages/ebook.jsx";
 import Aboutus from "./pages/Aboutus.jsx";
+import InterviewProductCart from "./components/InterviewProductCart.jsx";
+import TestProductCart from "./components/TestProductCart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -58,8 +60,10 @@ const router = createBrowserRouter(
       <Route path="" element={<PrivateRoute />}>
         <Route path="/profile" element={<Profile />} />
         <Route path="/shipping" element={<Shipping />} />
-        <Route path="/mockinterview" element={<Mockdiscriptions/>}/>
-        <Route path="/mocktest" element={<Mocktestdiscriptions/>}/>
+        {/* <Route path="/mockinterview" element={<Mockdiscriptions/>}/> */}
+        <Route path="/mockinterview" element={<InterviewProductCart/>} />
+        {/* <Route path="/mocktest" element={<Mocktestdiscriptions/>}/> */}
+        <Route path="/mocktest" element={<TestProductCart/>}/>
         <Route path="/video-content" element={<VideoContaint/>}/>
         <Route path="/ebook" element={<Ebook/>}/>
         <Route path="/aboutus" element={<Aboutus />} />

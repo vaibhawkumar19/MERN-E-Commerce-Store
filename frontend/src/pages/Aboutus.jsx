@@ -10,22 +10,23 @@ const Aboutus = () => {
     <h1 className="text-5xl font-bold text-center leading-snug text-white ">
                   About InterviewShala
       </h1>
-      <p className="text-1xl  mx-auto text-center text-white text-xl max-w-[80rem] place-content-center container ml-30 mt-1">
-        Welcome to Interview Shala! We are dedicated to providing high-quality
+      <p className="text-1xl mx-auto text-center text-white text-xl max-w-[80rem] place-content-center container ml-30 mt-1">
+        <br></br>Welcome to InterviewShala! We are dedicated to providing high-quality
         resources and support for interview preparation. Our mission is to
         help individuals succeed in their interviews and achieve their career
-        goals.At Interview Shala, we envision a world where every individual 
+        goals.At InterviewShala, we envision a world where every individual 
         is equipped with the skills and knowledge needed to excel in interviews 
         across diverse industries. We believe that through meticulous preparation 
         and continuous support, anyone can unlock their full potential and make a 
         lasting impact on their professional journey.
+      
         Whether you are embarking on your first job search, transitioning to a new industry,
         or aiming for career growth, Interview Shala is your partner in success.
         We are dedicated to supporting you at every step, ensuring that you not only 
         excel in interviews but also achieve your broader career objectives.
 
 Welcome to a community where preparation meets opportunity, and success is not just 
-a goal but a tangible reality. Your journey towards professional excellence begins here at Interview Shala!
+a goal but a tangible reality. Your journey towards professional excellence begins here at InterviewShala!
        
       </p>
       
